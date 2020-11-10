@@ -77,7 +77,7 @@ const command = {
       test: config.test_directory
     };
 
-    return promisify(create[type])(destinations[type], name, options);
+    return create[type](destinations[type], name, options);
   }
 };
 
