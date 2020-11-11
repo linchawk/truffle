@@ -72,7 +72,7 @@ const Create = {
     let underscored = toUnderscoreFromCamel(name || "");
     underscored = underscored.replace(/\./g, "_");
     const from = templates.migration.filename;
-    const filename = (new Date().getTime() / 1000) | 0; // Only do seconds.
+    let filename = (new Date().getTime() / 1000) | 0; // Only do seconds.
 
     if (name != null && name !== "") {
       filename += "_" + underscored;
